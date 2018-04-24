@@ -145,11 +145,13 @@ jobs:
       - image: readthedocs/build:2.0
     environment:
       - DOCS_TOX_ENV: "docs-py27"
-    - run:
-        name: Build documentation
-        command: |
-          . ../venv/bin/activate
-          tox -e $DOCS_TOX_ENV
+    steps:
+      - checkout
+      - run:
+          name: Build documentation
+          command: |
+            . ../venv/bin/activate
+            tox -e $DOCS_TOX_ENV
 
 workflows:
   version: 2
