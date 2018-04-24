@@ -148,9 +148,12 @@ jobs:
     steps:
       - checkout
       - run:
+          <<: *initialize-venv
+      - run:
           name: Build documentation
           command: |
             . ../venv/bin/activate
+            pip install tox
             tox -e $DOCS_TOX_ENV
 
 workflows:
