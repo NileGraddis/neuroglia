@@ -79,3 +79,11 @@ Tensor transformers
    :toctree: generated/
 
     tensor.ResponseReducer
+
+Datasets
+-------------------
+
+.. autosummary::
+   :toctree: generated/
+
+    datasets.fetch_rat_hippocampus_foraging
